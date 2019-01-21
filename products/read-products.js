@@ -13,7 +13,7 @@ $(document).ready(function(){
 // function to show list of products
 function showProducts(){
   // get list of products from the API
- $.getJSON("http://localhost/api/product/read.php", function(data){
+ $.getJSON("http://localhost/api/products/read.php", function(data){
    // html for listing products
    var read_products_html=`
      <!-- when clicked, it will load the create product form -->
@@ -68,6 +68,6 @@ read_products_html+=`</table>`;
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
 // chage page title
-changePageTitle("Read Products");
+changePageTitle("Read Product");
  });
 }
